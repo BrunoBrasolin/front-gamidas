@@ -15,8 +15,8 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class AppComponent {
   constructor(private sanitizer: DomSanitizer) {
-    this.linkBills = this.sanitizer.bypassSecurityTrustResourceUrl('http://bills.gamidas.dev.br');
-    this.linkNotification = this.sanitizer.bypassSecurityTrustResourceUrl('http://notification.gamidas.dev.br');
+    this.linkBills = this.sanitizer.bypassSecurityTrustResourceUrl('https://bills.gamidas.dev.br');
+    this.linkNotification = this.sanitizer.bypassSecurityTrustResourceUrl('https://notification.gamidas.dev.br');
   }
 
   linkBills: SafeUrl;
