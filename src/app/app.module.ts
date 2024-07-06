@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
-import { CommonModule } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
+import { provideHttpClient } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 @NgModule({
   declarations: [
@@ -19,10 +20,12 @@ import { MatCardModule } from '@angular/material/card';
     AppRoutingModule,
     MatListModule,
     MatButtonModule,
-    CommonModule,
-    MatCardModule
+    MatCardModule,
+    BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
