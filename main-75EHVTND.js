@@ -1,1 +1,0 @@
-import{a as e,b as t}from"./chunk-DEMFIITM.js";var r=e(t());(0,r.initFederation)("federation.manifest.json").catch(o=>console.error(o)).then(o=>import("./chunk-R4DHQBJZ.js")).catch(o=>console.error(o));
