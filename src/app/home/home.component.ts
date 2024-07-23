@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Module } from './home.interface';
 
 @Component({
   selector: 'app-home',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  public modules: Module[] = [
+    { title: 'Contas', text: 'Módulo para cálculo de porcentagem', url: 'contas', active: true },
+    { title: 'Chat', text: 'Módulo para o chat com uma IA', url: 'chat', active: true }
+  ]
 }

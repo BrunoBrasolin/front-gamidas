@@ -1,56 +1,16 @@
-<div class="menu">
-  <h2>Selecione um módulo</h2>
-  <div class="row">
-    <mat-card appearance="outlined">
-      <mat-card-header>
-        <mat-card-title>Contas</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p>Módulo para cálculo de porcentagem</p>
-      </mat-card-content>
-      <mat-divider></mat-divider>
-      <mat-card-actions align="end">
-        <a mat-button href="/contas">Contas</a>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card appearance="outlined">
-      <mat-card-header>
-        <mat-card-title>Notificações</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p>Módulo para as notificações</p>
-      </mat-card-content>
-      <mat-divider></mat-divider>
-      <mat-card-actions align="end">
-        <a mat-button href="#" disabled>Notificações</a>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card appearance="outlined">
-      <mat-card-header>
-        <mat-card-title>Devagar e Sempre</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p>Módulo para o devagar e sempre</p>
-      </mat-card-content>
-      <mat-divider></mat-divider>
-      <mat-card-actions align="end">
-        <a mat-button href="#" disabled>Devagar e Sempre</a>
-      </mat-card-actions>
-    </mat-card>
-
-    <mat-card appearance="outlined">
-      <mat-card-header>
-        <mat-card-title>Mercado</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <p>Módulo para compras no mercado</p>
-      </mat-card-content>
-      <mat-divider></mat-divider>
-      <mat-card-actions align="end">
-        <a mat-button href="#" disabled>Mercado</a>
-      </mat-card-actions>
-    </mat-card>
+<div class="container">
+  <h1 class="page-title">Selecione um módulo</h1>
+  <div class="card-list">
+    <div class="card" *ngFor="let module of modules">
+      <div class="card-header">
+        <h2 class="title">{{module.title}}</h2>
+      </div>
+      <div class="card-body">
+        <span class="text">{{ module.text }}</span>
+      </div>
+      <div class="card-footer">
+        <a class="link {{module.active ? 'active' : 'inactive' }}" href="/{{module.url}}">Acessar</a>
+      </div>
+    </div>
   </div>
 </div>
