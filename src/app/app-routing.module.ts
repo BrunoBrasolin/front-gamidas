@@ -9,7 +9,8 @@ const routes: Routes = [
     component: HomeComponent,
     pathMatch: 'full'
   },
-  { path: 'contas', loadComponent: () => loadRemoteModule('front-bills', './Component').then((m) => m.AppComponent) }
+  { path: 'contas', loadComponent: () => loadRemoteModule('front-bills', './Component').then((m) => m.AppComponent) },
+  { path: 'chat', loadComponent: () => loadRemoteModule('front-chat', './Component').then((m) => m.AppComponent) }
 ];
 
 @NgModule({
