@@ -18,6 +18,7 @@ $whjite: #ffffff;
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    overflow: hidden;
 
     >* {
       padding: 1rem;
@@ -26,7 +27,6 @@ $whjite: #ffffff;
     .card-header {
       background-color: #1c1c1c;
       color: #fff;
-      border-radius: 10px 10px 0 0;
     }
 
     .card-body {
