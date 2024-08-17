@@ -1,1 +1,0 @@
-import{Version as o}from"@angular/core";var e=new o("18.1.1");export{e as VERSION};
