@@ -1,5 +1,5 @@
 {
   "front-bills": "https://bills.gamidas.dev.br/remoteEntry.json",
   "front-chat": "https://chat.gamidas.dev.br/remoteEntry.json",
-  "front-logs": "http://localhost:4203/remoteEntry.json"
+  "front-logs": "https://logs.gamidas.dev.br/remoteEntry.json"
 }
