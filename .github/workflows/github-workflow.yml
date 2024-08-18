@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  Deploy:
+  CI-CD:
     uses: BrunoBrasolin/workflow-template/.github/workflows/angular-gh_pages.yml@main
     with:
       applicationName: front-gamidas
