@@ -9,6 +9,10 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+
 jobs:
   CI-CD:
     uses: BrunoBrasolin/workflow-template/.github/workflows/angular-gh_pages.yml@main
