@@ -13,4 +13,5 @@ jobs:
   Deploy:
     uses: BrunoBrasolin/workflow-template/.github/workflows/angular-gh_pages.yml@main
     with:
+      applicationName: front-gamidas
       cname: gamidas.dev.br
