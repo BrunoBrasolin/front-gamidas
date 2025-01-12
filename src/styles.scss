@@ -1,22 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+@import 'assets/styles/variables';
+
 html,
 body {
-  height: 100%;
-  overflow: hidden;
-  box-sizing: border-box;
+  background-color: $cyberpunk-black;
 }
 
-body {
+* {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: rgba(#000000, .75);
-  position: relative;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  font-family: $font;
+  color: $cyberpunk-yellow;
+  letter-spacing: 1px;
 }
 
 .container {
   max-width: 1200px;
-  padding: 0 1rem;
+  padding: 3rem 1rem;
   margin: 0 auto;
-  width: 100%;
-  position: relative;
-  z-index: 1;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+strong,
+.strong {
+  font-weight: 700;
+}
+
+button,
+.button,
+input[type='submit'] {
+  cursor: pointer;
 }

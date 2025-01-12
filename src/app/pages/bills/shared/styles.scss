@@ -1,0 +1,93 @@
+@import '../../../../assets/styles/variables.scss';
+
+.main {
+  background-color: $cyberpunk-dark-gray;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 400px;
+  box-shadow: 0 0 10px $cyberpunk-neon-blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+
+  .title {
+    font-size: 2.5rem;
+    color: $cyberpunk-pink;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 5px $cyberpunk-neon-pink, 0 0 10px $cyberpunk-neon-pink;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .label {
+      color: $cyberpunk-light-text;
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .input,
+    .select {
+      width: 100%;
+      padding: 0.8rem;
+      background-color: $cyberpunk-input-bg;
+      border: 2px solid $cyberpunk-border;
+      border-radius: 8px;
+      color: $cyberpunk-light-text;
+      font-size: 1rem;
+      outline: none;
+      transition: background-color 0.3s ease, border 0.3s ease;
+
+      &:focus {
+        background-color: $cyberpunk-black;
+        border-color: $cyberpunk-neon-blue;
+      }
+    }
+  }
+
+  .button {
+    background-color: $cyberpunk-pink;
+    color: $cyberpunk-white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 0 8px $cyberpunk-neon-pink;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 1rem;
+
+    &:hover {
+      background-color: $cyberpunk-button-hover;
+      box-shadow: 0 0 15px $cyberpunk-neon-pink, 0 0 20px $cyberpunk-neon-pink;
+    }
+  }
+
+  @media screen and (max-width: 450px) {
+    .button-row {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+
+      .button {
+        margin: .5rem 0;
+      }
+    }
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+    margin: 1rem 0;
+    text-shadow: 0 0 5px $cyberpunk-neon-blue, 0 0 10px $cyberpunk-neon-blue;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    color: $cyberpunk-light-text;
+    margin: 0.5rem 0;
+  }
+}

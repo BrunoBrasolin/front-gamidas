@@ -1,0 +1,21 @@
+<main class="main main-calculate-percentage">
+  <h1 class="title">Calcular Porcentagem</h1>
+
+  <div class="form-group">
+    <input class="input" type="number" placeholder="Valor" [(ngModel)]="value" />
+  </div>
+
+  <br>
+
+  <div class="button-row">
+    <button class="button" (click)="onClickLimpar()">Limpar</button>
+    <button class="button" (click)="onClickCalcular()">Calcular</button>
+  </div>
+
+  <br>
+  <br>
+
+  <h2 class="subtitle">Valor de cada um</h2>
+  <p class="text">Letícia: R${{ apiReturn?.Leticia || '0,00' }}</p>
+  <p class="text">Bruno: R${{ apiReturn?.Bruno || '0,00' }}</p>
+</main>

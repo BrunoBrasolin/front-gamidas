@@ -1,0 +1,120 @@
+@import '../../../assets/styles/variables.scss';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: $cyberpunk-white;
+  color: $cyberpunk-black;
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      $imageSize: 5rem;
+      height: $imageSize;
+      width: $imageSize;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
+  .middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      font-size: 2rem;
+      letter-spacing: .75rem;
+      color: $cyberpunk-yellow;
+      animation: pump-text-shadow 1.5s ease-in-out infinite;
+    }
+
+    .subtitle {
+      font-weight: 100;
+      font-size: 1.25rem;
+      color: $cyberpunk-black;
+      text-align: center;
+    }
+  }
+
+  .right {
+    position: relative;
+    $paddingX: .5rem;
+
+    .select-button {
+      cursor: pointer;
+      background-color: $cyberpunk-black;
+      font-size: 1rem;
+      position: relative;
+      padding: 1rem $paddingX;
+      color: $cyberpunk-yellow;
+      border: 1px solid $cyberpunk-black;
+      border-radius: 12px;
+      transition: .2s;
+
+      &.active {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+
+      &:hover {
+        border-color: $cyberpunk-yellow;
+        box-shadow: 0 0 10px $cyberpunk-neon-pink, 0 0 20px $cyberpunk-neon-pink, 0 0 30px $cyberpunk-neon-pink, 0 0 40px $cyberpunk-neon-pink;
+        text-shadow: 0 0 5px $cyberpunk-neon-pink, 0 0 10px $cyberpunk-neon-pink, 0 0 15px $cyberpunk-neon-pink;
+      }
+    }
+
+
+    .list {
+      flex-direction: column;
+      position: absolute;
+      display: none;
+      background-color: $cyberpunk-yellow;
+      width: 100%;
+      transition: 2s;
+
+      &.open {
+        display: flex;
+      }
+
+      .item {
+        display: flex;
+
+        .link {
+          padding: .25rem $paddingX;
+          color: $cyberpunk-black;
+          width: 100%;
+
+          &:hover {
+            background-color: $cyberpunk-neon-green;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes pump-text-shadow {
+  0% {
+    text-shadow:
+      0 0 1px $cyberpunk-neon-pink,
+      0 0 2px $cyberpunk-neon-pink,
+      0 0 3px $cyberpunk-neon-pink;
+  }
+  50% {
+    text-shadow:
+      0 0 3px $cyberpunk-neon-pink,
+      0 0 5px $cyberpunk-neon-pink,
+      0 0 6px $cyberpunk-neon-pink;
+  }
+  100% {
+    text-shadow:
+      0 0 1px $cyberpunk-neon-pink,
+      0 0 2px $cyberpunk-neon-pink,
+      0 0 3px $cyberpunk-neon-pink;
+  }
+}

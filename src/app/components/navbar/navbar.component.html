@@ -1,0 +1,23 @@
+<nav class="navbar">
+  <a routerLink="/" class="left link">
+    <img class="logo" src="assets/images/MAGGIE.jpg" alt="Maggie" title="Maggie">
+  </a>
+  <div class="middle">
+    <h1 class="title">Gamidas</h1>
+    <h2 class="subtitle">Bruno & Letícia & Maggie & Daron</h2>
+  </div>
+  <div class="right">
+    <button class="select-button" [class.active]="showModules" type="button" (click)="toggleShowModules()">
+      {{ activeModule?.name }}
+      {{ showModules ? 'X' : 'V' }}
+    </button>
+
+    <ul class="list" [class.open]="showModules">
+      <li class="item" *ngFor="let module of modules">
+        <a class="link" [routerLink]="module.url" (click)="toggleShowModules()">
+          {{module.name}}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

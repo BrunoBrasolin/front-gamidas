@@ -1,0 +1,41 @@
+@import '../../../assets/styles/variables.scss';
+
+.main-bills {
+  .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+
+    .button {
+      color: $cyberpunk-purple;
+      background-color: transparent;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      transition: .2s;
+
+      &:hover {
+        text-shadow:
+          0 0 3px $cyberpunk-neon-green,
+          0 0 5px $cyberpunk-neon-green,
+          0 0 6px $cyberpunk-neon-green;
+      }
+
+      &.active {
+        text-shadow:
+          0 0 1px $cyberpunk-neon-green,
+          0 0 2px $cyberpunk-neon-green,
+          0 0 3px $cyberpunk-neon-green;
+        transition: .2s;
+
+        &:hover {
+          text-shadow:
+            0 0 3px $cyberpunk-neon-green,
+            0 0 5px $cyberpunk-neon-green,
+            0 0 6px $cyberpunk-neon-green;
+        }
+      }
+    }
+  }
+}

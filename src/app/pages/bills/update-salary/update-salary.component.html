@@ -1,0 +1,22 @@
+<main class="main main-update-salary">
+  <h1 class="title">Atualizar Salário</h1>
+
+  <div class="form-group">
+    <label class="label" for="salary">Valor (R$)</label>
+    <input class="input" id="salary" type="number" [(ngModel)]="salary" />
+  </div>
+
+  <br>
+
+  <div class="form-group">
+    <label class="label" for="person">Pessoa</label>
+    <select class="select" id="person" [(ngModel)]="person">
+      <option [value]="0">Letícia</option>
+      <option [value]="1">Bruno</option>
+    </select>
+  </div>
+
+  <br>
+
+  <button class="button" (click)="onClickAtualizar()">Atualizar</button>
+</main>
