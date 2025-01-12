@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ApiDtoInterface, CalculatePercentageInterface } from './bills.interface';
 
@@ -7,7 +7,7 @@ import { ApiDtoInterface, CalculatePercentageInterface } from './bills.interface
   providedIn: 'root'
 })
 export class BillsService {
-  constructor(private readonly http: HttpClient) { }
+  private readonly http: HttpClient = inject(HttpClient);
 
 
   public CalculatePercentage(value: number): Observable<CalculatePercentageInterface> {

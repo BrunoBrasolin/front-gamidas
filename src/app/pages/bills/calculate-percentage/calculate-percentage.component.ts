@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { BillsService } from '../bills.service';
 import { FormsModule } from '@angular/forms';
 import { CalculatePercentageInterface } from '../bills.interface';
 
 @Component({
-  selector: 'app-calculate-percentage',
+  selector: 'gamidas-calculate-percentage',
   imports: [
     FormsModule
   ],
@@ -12,8 +12,7 @@ import { CalculatePercentageInterface } from '../bills.interface';
   styleUrl: '../shared/styles.scss'
 })
 export class CalculatePercentageComponent {
-  constructor(private readonly service: BillsService) { }
-
+  private readonly service: BillsService = inject(BillsService);
   public value: number | null = null;
   public apiReturn: CalculatePercentageInterface | null = null;
 

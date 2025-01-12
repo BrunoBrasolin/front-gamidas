@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { Module } from './navbar.interface';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'gamidas-navbar',
   imports: [
     RouterModule,
     CommonModule
@@ -13,8 +13,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent implements OnInit {
-  constructor(private readonly router: Router) { }
-
+  private readonly router: Router = inject(Router);
   public showModules: boolean = false;
   public activeModule: Module | null = null;
   public modules: Module[] = [

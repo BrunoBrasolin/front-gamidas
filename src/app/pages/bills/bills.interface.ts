@@ -12,8 +12,3 @@ export interface ApiDtoInterface {
   salary: number,
   person: PersonInterface
 }
-
-export interface ButtonColors {
-  calculatePercentage: string;
-  updateSalary: string;
-}

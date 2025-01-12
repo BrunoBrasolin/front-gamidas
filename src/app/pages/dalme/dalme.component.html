@@ -1,0 +1,38 @@
+<div class="content">
+  <div class="header">
+    <span class="title">dalme</span>
+  </div>
+
+  <div class="body">
+    <div *ngFor="let message of messages" class="message-content {{message.sender}}">
+      <div class="message">
+        <span class="text">
+          {{message.message}}
+        </span>
+      </div>
+    </div>
+
+    <div *ngIf="loading.loading" class="message-content {{loading.owner}}">
+      <div class="message">
+        <span class="text">
+          <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+          </div>
+        </span>
+      </div>
+    </div>
+
+    <div id="chatEnd"></div>
+  </div>
+
+  <form class="footer" [formGroup]="chatForm" (ngSubmit)="handleMessageSent()">
+    <button type="button" [disabled]="loading.loading" class="microphone {{isRecording ? 'recording' : ''}}"
+      (click)="toggleRecording()">
+      <img src="/assets/icons/microphone.png" alt="Microphone" title="Microphone">
+    </button>
+    <input type="text" class="input" formControlName="userInput" placeholder="Digite sua mensagem..." />
+    <button type="submit" [disabled]="loading.loading" class="send">Enviar</button>
+  </form>
+</div>

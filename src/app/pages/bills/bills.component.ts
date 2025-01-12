@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ButtonColors } from './bills.interface';
 import { CalculatePercentageComponent } from './calculate-percentage/calculate-percentage.component';
 import { UpdateSalaryComponent } from './update-salary/update-salary.component';
 import { CommonModule } from '@angular/common';
@@ -10,7 +9,7 @@ enum Components {
 }
 
 @Component({
-  selector: 'app-bills',
+  selector: 'gamidas-bills',
   imports: [
     CalculatePercentageComponent,
     UpdateSalaryComponent,
@@ -20,29 +19,16 @@ enum Components {
   styleUrl: './bills.component.scss'
 })
 export class BillsComponent {
-  buttonColors: ButtonColors = {
-    calculatePercentage: "basic",
-    updateSalary: "basic"
-  };
 
   public activeComponent = Components.CalculatePercentage;
   public ComponentsType = Components;
 
-  constructor() {
-    this.buttonColors.calculatePercentage = "primary";
-    this.buttonColors.updateSalary = "basic";
-  }
-
   navigateToUpdateSalary(): void {
 
     this.activeComponent = Components.UpdateSalary;
-    this.buttonColors.updateSalary = "primary";
-    this.buttonColors.calculatePercentage = "basic";
   }
 
   navigateToCalculatePercentage(): void {
     this.activeComponent = Components.CalculatePercentage;
-    this.buttonColors.calculatePercentage = "primary";
-    this.buttonColors.updateSalary = "basic";
   }
 }

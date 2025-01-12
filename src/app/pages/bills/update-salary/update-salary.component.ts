@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { BillsService } from '../bills.service';
 import { FormsModule } from '@angular/forms';
 import { ApiDtoInterface, PersonInterface } from '../bills.interface';
 
 @Component({
-  selector: 'app-update-salary',
+  selector: 'gamidas-update-salary',
   imports: [
     FormsModule
   ],
@@ -12,8 +12,7 @@ import { ApiDtoInterface, PersonInterface } from '../bills.interface';
   styleUrl: '../shared/styles.scss'
 })
 export class UpdateSalaryComponent {
-  constructor(private readonly service: BillsService) { }
-
+  private readonly service: BillsService = inject(BillsService);
   public salary: number | null = null;
   public person: PersonInterface | null = null;
   public timer: number = 3000;
