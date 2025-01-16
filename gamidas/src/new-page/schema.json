@@ -1,0 +1,13 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "$id": "NewPageSchema",
+  "title": "New Page Options Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the new page."
+    }
+  },
+  "required": ["name"]
+}
