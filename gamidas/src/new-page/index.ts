@@ -3,10 +3,7 @@ import { strings } from '@angular-devkit/core';
 
 // Entry point for the schematic
 export function newPage(_options: any): Rule {
-  console.log('a');
-
   return (tree: Tree, _context: SchematicContext) => {
-    console.log('a');
     if (!_options.name) {
       throw new Error('The "name" option is required.');
     }
