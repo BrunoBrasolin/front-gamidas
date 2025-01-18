@@ -52,10 +52,11 @@
   @media screen and (max-width: 450px) {
     .button-row {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
       justify-content: space-around;
+      align-items: center;
 
-      .button {
+      gamidas-button {
         margin: .5rem 0;
       }
     }
