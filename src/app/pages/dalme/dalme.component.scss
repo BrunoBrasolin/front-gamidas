@@ -1,7 +1,6 @@
 @use "sass:math";
 @import '../../../assets/styles/variables.scss';
 
-$cyberpunk-dark-gray: #e0e0e0;
 $fabSize: 60px;
 $animationTime: 0.5s;
 $animationAfterWidth: math.div($animationTime, 2);
@@ -76,12 +75,12 @@ $chatPadding: 1rem;
     justify-content: center;
     align-items: center;
     height: $fabSize;
-    background-color: $cyberpunk-yellow;
+    background-color: map-get($cyberpunk-theme, 'yellow');
     font-size: 2rem;
     column-gap: 1rem;
 
     .title {
-      color: $cyberpunk-neon-pink;
+      color: map-get($cyberpunk-theme, 'pink-neon');
     }
   }
 
@@ -104,8 +103,8 @@ $chatPadding: 1rem;
         max-width: 70%;
 
         .text {
-          background-color: $cyberpunk-yellow;
-          color: $cyberpunk-neon-pink;
+          background-color: map-get($cyberpunk-theme, 'yellow');
+          color: map-get($cyberpunk-theme, 'pink-neon');
           border-radius: 5px;
           white-space: pre-line;
           display: flex;
@@ -121,7 +120,7 @@ $chatPadding: 1rem;
           .dot {
             width: $dotSize;
             height: $dotSize;
-            background-color: $cyberpunk-neon-pink;
+            background-color: map-get($cyberpunk-theme, 'pink-neon');
             border-radius: 50%;
             display: inline-block;
             animation-duration: $dotAnimationDuration;
@@ -155,11 +154,11 @@ $chatPadding: 1rem;
   .footer {
     display: flex;
     padding: $chatPadding;
-    border-top: 1px solid $cyberpunk-dark-gray;
+    border-top: 1px solid map-get($cyberpunk-theme, 'dark')-gray;
 
     .microphone {
       border: none;
-      background-color: $cyberpunk-yellow;
+      background-color: map-get($cyberpunk-theme, 'yellow');
       border-radius: 50%;
       cursor: pointer;
       transition: 0.25s;
@@ -184,22 +183,22 @@ $chatPadding: 1rem;
       flex: 1;
       margin: 0 10px;
       padding: 10px;
-      border: 1px solid $cyberpunk-dark-gray;
+      border: 1px solid map-get($cyberpunk-theme, 'dark')-gray;
       border-radius: 5px;
       text-transform: none;
-      color: $cyberpunk-neon-pink;
+      color: map-get($cyberpunk-theme, 'pink-neon');
     }
 
     .send {
       padding: 10px 15px;
-      background-color: $cyberpunk-yellow;
+      background-color: map-get($cyberpunk-theme, 'yellow');
       cursor: pointer;
       border: none;
       border-radius: 5px;
-      color: $cyberpunk-neon-pink;
+      color: map-get($cyberpunk-theme, 'pink-neon');
 
       &:hover {
-        background-color: darken($cyberpunk-yellow, 1);
+        background-color: darken(map-get($cyberpunk-theme, 'yellow'), 1);
       }
     }
   }

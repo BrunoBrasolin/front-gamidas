@@ -5,8 +5,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: $cyberpunk-white;
-  color: $cyberpunk-black;
+  background-color: map-get($cyberpunk-theme, 'white');
+  color: map-get($cyberpunk-theme, 'black');
 
   .left {
     display: flex;
@@ -29,14 +29,14 @@
     .title {
       font-size: 2rem;
       letter-spacing: .75rem;
-      color: $cyberpunk-yellow;
+      color: map-get($cyberpunk-theme, 'yellow');
       animation: pump-text-shadow 1.5s ease-in-out infinite;
     }
 
     .subtitle {
       font-weight: 100;
       font-size: 1.25rem;
-      color: $cyberpunk-black;
+      color: map-get($cyberpunk-theme, 'black');
       text-align: center;
     }
   }
@@ -47,12 +47,12 @@
 
     .select-button {
       cursor: pointer;
-      background-color: $cyberpunk-black;
+      background-color: map-get($cyberpunk-theme, 'black');
       font-size: 1rem;
       position: relative;
       padding: 1rem $paddingX;
-      color: $cyberpunk-yellow;
-      border: 1px solid $cyberpunk-black;
+      color: map-get($cyberpunk-theme, 'yellow');
+      border: 1px solid map-get($cyberpunk-theme, 'black');
       border-radius: 12px;
       transition: .2s;
 
@@ -62,9 +62,9 @@
       }
 
       &:hover {
-        border-color: $cyberpunk-yellow;
-        box-shadow: 0 0 10px $cyberpunk-neon-pink, 0 0 20px $cyberpunk-neon-pink, 0 0 30px $cyberpunk-neon-pink, 0 0 40px $cyberpunk-neon-pink;
-        text-shadow: 0 0 5px $cyberpunk-neon-pink, 0 0 10px $cyberpunk-neon-pink, 0 0 15px $cyberpunk-neon-pink;
+        border-color: map-get($cyberpunk-theme, 'yellow');
+        box-shadow: 0 0 10px map-get($cyberpunk-theme, 'pink-neon'), 0 0 20px map-get($cyberpunk-theme, 'pink-neon'), 0 0 30px map-get($cyberpunk-theme, 'pink-neon'), 0 0 40px map-get($cyberpunk-theme, 'pink-neon');
+        text-shadow: 0 0 5px map-get($cyberpunk-theme, 'pink-neon'), 0 0 10px map-get($cyberpunk-theme, 'pink-neon'), 0 0 15px map-get($cyberpunk-theme, 'pink-neon');
       }
     }
 
@@ -73,7 +73,7 @@
       flex-direction: column;
       position: absolute;
       display: none;
-      background-color: $cyberpunk-yellow;
+      background-color: map-get($cyberpunk-theme, 'yellow');
       width: 100%;
       transition: 2s;
 
@@ -86,11 +86,11 @@
 
         .link {
           padding: .25rem $paddingX;
-          color: $cyberpunk-black;
+          color: map-get($cyberpunk-theme, 'black');
           width: 100%;
 
           &:hover {
-            background-color: $cyberpunk-neon-green;
+            background-color: map-get($cyberpunk-theme, 'green-neon');
           }
         }
       }
@@ -101,20 +101,20 @@
 @keyframes pump-text-shadow {
   0% {
     text-shadow:
-      0 0 1px $cyberpunk-neon-pink,
-      0 0 2px $cyberpunk-neon-pink,
-      0 0 3px $cyberpunk-neon-pink;
+      0 0 1px map-get($cyberpunk-theme, 'pink-neon'),
+      0 0 2px map-get($cyberpunk-theme, 'pink-neon'),
+      0 0 3px map-get($cyberpunk-theme, 'pink-neon');
   }
   50% {
     text-shadow:
-      0 0 3px $cyberpunk-neon-pink,
-      0 0 5px $cyberpunk-neon-pink,
-      0 0 6px $cyberpunk-neon-pink;
+      0 0 3px map-get($cyberpunk-theme, 'pink-neon'),
+      0 0 5px map-get($cyberpunk-theme, 'pink-neon'),
+      0 0 6px map-get($cyberpunk-theme, 'pink-neon');
   }
   100% {
     text-shadow:
-      0 0 1px $cyberpunk-neon-pink,
-      0 0 2px $cyberpunk-neon-pink,
-      0 0 3px $cyberpunk-neon-pink;
+      0 0 1px map-get($cyberpunk-theme, 'pink-neon'),
+      0 0 2px map-get($cyberpunk-theme, 'pink-neon'),
+      0 0 3px map-get($cyberpunk-theme, 'pink-neon');
   }
 }

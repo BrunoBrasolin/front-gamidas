@@ -2,12 +2,14 @@ import { Component, inject } from '@angular/core';
 import { BillsService } from '../bills.service';
 import { FormsModule } from '@angular/forms';
 import { ApiDtoInterface, PersonInterface } from '../bills.interface';
+import { ButtonComponent } from "../../../components/button/button.component";
 
 @Component({
   selector: 'gamidas-update-salary',
   imports: [
-    FormsModule
-  ],
+    FormsModule,
+    ButtonComponent
+],
   templateUrl: './update-salary.component.html',
   styleUrl: '../shared/styles.scss'
 })

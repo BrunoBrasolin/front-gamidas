@@ -1,11 +1,11 @@
 @import '../../../../assets/styles/variables.scss';
 
 .main {
-  background-color: $cyberpunk-dark-gray;
+  background-color: map-get($cyberpunk-theme, 'dark-gray');
   border-radius: 10px;
   padding: 2rem;
   max-width: 400px;
-  box-shadow: 0 0 10px $cyberpunk-neon-blue;
+  box-shadow: 0 0 10px map-get($cyberpunk-theme, 'neon-blue');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,10 +13,10 @@
 
   .title {
     font-size: 2.5rem;
-    color: $cyberpunk-pink;
+    color: map-get($cyberpunk-theme, 'pink');
     text-align: center;
     margin-bottom: 1rem;
-    text-shadow: 0 0 5px $cyberpunk-neon-pink, 0 0 10px $cyberpunk-neon-pink;
+    text-shadow: 0 0 5px map-get($cyberpunk-theme, 'pink-neon'), 0 0 10px map-get($cyberpunk-theme, 'pink-neon');
   }
 
   .form-group {
@@ -24,7 +24,7 @@
     margin-bottom: 1rem;
 
     .label {
-      color: $cyberpunk-light-text;
+      color: map-get($cyberpunk-theme, 'light-text');
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
       display: block;
@@ -34,36 +34,18 @@
     .select {
       width: 100%;
       padding: 0.8rem;
-      background-color: $cyberpunk-input-bg;
-      border: 2px solid $cyberpunk-border;
+      background-color: map-get($cyberpunk-theme, 'input-bg');
+      border: 2px solid map-get($cyberpunk-theme, 'border');
       border-radius: 8px;
-      color: $cyberpunk-light-text;
+      color: map-get($cyberpunk-theme, 'light-text');
       font-size: 1rem;
       outline: none;
       transition: background-color 0.3s ease, border 0.3s ease;
 
       &:focus {
-        background-color: $cyberpunk-black;
-        border-color: $cyberpunk-neon-blue;
+        background-color: map-get($cyberpunk-theme, 'black');
+        border-color: map-get($cyberpunk-theme, 'neon-blue');
       }
-    }
-  }
-
-  .button {
-    background-color: $cyberpunk-pink;
-    color: $cyberpunk-white;
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    box-shadow: 0 0 8px $cyberpunk-neon-pink;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    margin: 0 1rem;
-
-    &:hover {
-      background-color: $cyberpunk-button-hover;
-      box-shadow: 0 0 15px $cyberpunk-neon-pink, 0 0 20px $cyberpunk-neon-pink;
     }
   }
 
@@ -82,12 +64,12 @@
   .subtitle {
     font-size: 1.8rem;
     margin: 1rem 0;
-    text-shadow: 0 0 5px $cyberpunk-neon-blue, 0 0 10px $cyberpunk-neon-blue;
+    text-shadow: 0 0 5px map-get($cyberpunk-theme, 'neon-blue'), 0 0 10px map-get($cyberpunk-theme, 'neon-blue');
   }
 
   .text {
     font-size: 1.2rem;
-    color: $cyberpunk-light-text;
+    color: map-get($cyberpunk-theme, 'light-text');
     margin: 0.5rem 0;
   }
 }

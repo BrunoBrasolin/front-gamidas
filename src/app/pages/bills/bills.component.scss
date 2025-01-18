@@ -8,7 +8,7 @@
     margin-bottom: 2rem;
 
     .button {
-      color: $cyberpunk-purple;
+      color: map-get($cyberpunk-theme, 'purple');
       background-color: transparent;
       font-weight: bold;
       text-transform: uppercase;
@@ -17,23 +17,23 @@
 
       &:hover {
         text-shadow:
-          0 0 3px $cyberpunk-neon-green,
-          0 0 5px $cyberpunk-neon-green,
-          0 0 6px $cyberpunk-neon-green;
+          0 0 3px map-get($cyberpunk-theme, 'green-neon'),
+          0 0 5px map-get($cyberpunk-theme, 'green-neon'),
+          0 0 6px map-get($cyberpunk-theme, 'green-neon');
       }
 
       &.active {
         text-shadow:
-          0 0 1px $cyberpunk-neon-green,
-          0 0 2px $cyberpunk-neon-green,
-          0 0 3px $cyberpunk-neon-green;
+          0 0 1px map-get($cyberpunk-theme, 'green-neon'),
+          0 0 2px map-get($cyberpunk-theme, 'green-neon'),
+          0 0 3px map-get($cyberpunk-theme, 'green-neon');
         transition: .2s;
 
         &:hover {
           text-shadow:
-            0 0 3px $cyberpunk-neon-green,
-            0 0 5px $cyberpunk-neon-green,
-            0 0 6px $cyberpunk-neon-green;
+            0 0 3px map-get($cyberpunk-theme, 'green-neon'),
+            0 0 5px map-get($cyberpunk-theme, 'green-neon'),
+            0 0 6px map-get($cyberpunk-theme, 'green-neon');
         }
       }
     }

@@ -3,7 +3,7 @@
 
 html,
 body {
-  background-color: $cyberpunk-black;
+  background-color: map-get($cyberpunk-theme, 'black');
 }
 
 * {
@@ -14,7 +14,7 @@ body {
   text-decoration: none;
   border: none;
   font-family: $font;
-  color: $cyberpunk-yellow;
+  color: map-get($cyberpunk-theme, 'yellow');
   letter-spacing: 1px;
 }
 

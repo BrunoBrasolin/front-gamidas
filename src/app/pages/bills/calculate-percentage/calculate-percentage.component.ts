@@ -2,12 +2,14 @@ import { Component, inject } from '@angular/core';
 import { BillsService } from '../bills.service';
 import { FormsModule } from '@angular/forms';
 import { CalculatePercentageInterface } from '../bills.interface';
+import { ButtonComponent } from "../../../components/button/button.component";
 
 @Component({
   selector: 'gamidas-calculate-percentage',
   imports: [
-    FormsModule
-  ],
+    FormsModule,
+    ButtonComponent
+],
   templateUrl: './calculate-percentage.component.html',
   styleUrl: '../shared/styles.scss'
 })
