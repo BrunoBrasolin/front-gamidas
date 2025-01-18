@@ -1,30 +1,96 @@
 @import '../../../assets/styles/variables.scss';
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 1rem 2rem;
   background-color: map-get($cyberpunk-theme, 'white');
   color: map-get($cyberpunk-theme, 'black');
+  position: relative;
 
-  .left {
+  .mobile-top {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
-    .logo {
-      $imageSize: 5rem;
-      height: $imageSize;
-      width: $imageSize;
-      object-fit: cover;
-      border-radius: 50%;
+    .left {
+      display: flex;
+      align-items: center;
+      width: 50%;
+
+      .logo {
+        $imageSize: 5rem;
+        height: $imageSize;
+        width: $imageSize;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+
+    .right {
+      position: relative;
+      $paddingX: .5rem;
+
+      .select-button {
+        cursor: pointer;
+        background-color: map-get($cyberpunk-theme, 'black');
+        font-size: 1rem;
+        position: relative;
+        padding: 1rem $paddingX;
+        color: map-get($cyberpunk-theme, 'yellow');
+        border: 1px solid map-get($cyberpunk-theme, 'black');
+        border-radius: 12px;
+        transition: .2s;
+
+        &.active {
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+
+        &:hover {
+          border-color: map-get($cyberpunk-theme, 'yellow');
+          box-shadow: 0 0 10px map-get($cyberpunk-theme, 'pink-neon'), 0 0 20px map-get($cyberpunk-theme, 'pink-neon'), 0 0 30px map-get($cyberpunk-theme, 'pink-neon'), 0 0 40px map-get($cyberpunk-theme, 'pink-neon');
+          text-shadow: 0 0 5px map-get($cyberpunk-theme, 'pink-neon'), 0 0 10px map-get($cyberpunk-theme, 'pink-neon'), 0 0 15px map-get($cyberpunk-theme, 'pink-neon');
+        }
+      }
+
+
+      .list {
+        flex-direction: column;
+        position: absolute;
+        display: none;
+        background-color: map-get($cyberpunk-theme, 'yellow');
+        width: 100%;
+        transition: 2s;
+        z-index: 1;
+
+        &.open {
+          display: flex;
+        }
+
+        .item {
+          display: flex;
+
+          .link {
+            padding: .25rem $paddingX;
+            color: map-get($cyberpunk-theme, 'black');
+            width: 100%;
+
+            &:hover {
+              background-color: map-get($cyberpunk-theme, 'green-neon');
+            }
+          }
+        }
+      }
     }
   }
 
-  .middle {
+  .bottom-mobile {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     .title {
       font-size: 2rem;
@@ -39,61 +105,13 @@
       color: map-get($cyberpunk-theme, 'black');
       text-align: center;
     }
-  }
 
-  .right {
-    position: relative;
-    $paddingX: .5rem;
-
-    .select-button {
-      cursor: pointer;
-      background-color: map-get($cyberpunk-theme, 'black');
-      font-size: 1rem;
-      position: relative;
-      padding: 1rem $paddingX;
-      color: map-get($cyberpunk-theme, 'yellow');
-      border: 1px solid map-get($cyberpunk-theme, 'black');
-      border-radius: 12px;
-      transition: .2s;
-
-      &.active {
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
-      }
-
-      &:hover {
-        border-color: map-get($cyberpunk-theme, 'yellow');
-        box-shadow: 0 0 10px map-get($cyberpunk-theme, 'pink-neon'), 0 0 20px map-get($cyberpunk-theme, 'pink-neon'), 0 0 30px map-get($cyberpunk-theme, 'pink-neon'), 0 0 40px map-get($cyberpunk-theme, 'pink-neon');
-        text-shadow: 0 0 5px map-get($cyberpunk-theme, 'pink-neon'), 0 0 10px map-get($cyberpunk-theme, 'pink-neon'), 0 0 15px map-get($cyberpunk-theme, 'pink-neon');
-      }
-    }
-
-
-    .list {
-      flex-direction: column;
-      position: absolute;
-      display: none;
-      background-color: map-get($cyberpunk-theme, 'yellow');
-      width: 100%;
-      transition: 2s;
-
-      &.open {
-        display: flex;
-      }
-
-      .item {
-        display: flex;
-
-        .link {
-          padding: .25rem $paddingX;
-          color: map-get($cyberpunk-theme, 'black');
-          width: 100%;
-
-          &:hover {
-            background-color: map-get($cyberpunk-theme, 'green-neon');
-          }
-        }
-      }
+    @media screen and (max-width: 550px) {
+      position: inherit;
+      transform: inherit;
+      top: inherit;
+      left: inherit;
+      margin-top: 1rem;
     }
   }
 }
@@ -105,12 +123,14 @@
       0 0 2px map-get($cyberpunk-theme, 'pink-neon'),
       0 0 3px map-get($cyberpunk-theme, 'pink-neon');
   }
+
   50% {
     text-shadow:
       0 0 3px map-get($cyberpunk-theme, 'pink-neon'),
       0 0 5px map-get($cyberpunk-theme, 'pink-neon'),
       0 0 6px map-get($cyberpunk-theme, 'pink-neon');
   }
+
   100% {
     text-shadow:
       0 0 1px map-get($cyberpunk-theme, 'pink-neon'),
