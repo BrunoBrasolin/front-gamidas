@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { Module } from './navbar.interface';
 import { CommonModule } from '@angular/common';
+import { HomeService } from '../../pages/home/home.service';
 
 @Component({
   selector: 'gamidas-navbar',
@@ -14,14 +15,10 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent implements OnInit {
   private readonly router: Router = inject(Router);
+  private readonly homeService: HomeService = inject(HomeService);
   public showModules: boolean = false;
   public activeModule: Module | null = null;
-  public modules: Module[] = [
-    { url: "", name: "Home" },
-    { url: "contas", name: "Contas" },
-    { url: "dalme", name: "DALME" },
-    { url: "logs", name: "Logs" }
-  ];
+  public modules: Module[] = this.homeService.getModules();
 
   public toggleShowModules(): void {
     this.showModules = !this.showModules

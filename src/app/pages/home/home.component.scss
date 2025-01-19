@@ -1,4 +1,53 @@
-.text {
+@use "sass:map";
+@import '../../../assets/styles/variables.scss';
+
+.module-selection {
   text-align: center;
-  margin-top: 5rem;
+
+  .title {
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    margin-bottom: 2rem;
+    color: #666;
+  }
+
+  .modules {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+
+    .module-card {
+      width: 200px;
+      padding: 1rem;
+      border: 1px solid map.get($cyberpunk-theme, 'purple-neon');
+      border-radius: 8px;
+      box-shadow: 0 4px 8px map.get($cyberpunk-theme, 'purple-neon');
+      text-align: center;
+      transition: 0.2s;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px map.get($cyberpunk-theme, 'purple-neon');
+      }
+
+      .module-image {
+        margin-bottom: 1rem;
+
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+        }
+      }
+
+      h2 {
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
 }
