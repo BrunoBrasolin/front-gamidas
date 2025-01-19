@@ -1,10 +1,5 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
-import { BillsComponent } from './pages/bills/bills.component';
-import { DalmeComponent } from './pages/dalme/dalme.component';
+import { HomeService } from './pages/home/home.service';
 
-export const routes: Routes = [
-  { component: HomeComponent, path: '' },
-  { component: BillsComponent, path: 'contas' },
-  { component: DalmeComponent, path: 'dalme' }
-];
+const homeService = new HomeService();
+export const routes: Routes = homeService.getRoutes();

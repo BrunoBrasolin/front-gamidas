@@ -1,0 +1,20 @@
+<table border="1">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Message</th>
+      <th>Level</th>
+      <th>Timestamp</th>
+      <th>Properties</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let log of logs">
+      <td>{{ log.Id }}</td>
+      <td>{{ log.Message }}</td>
+      <td>{{ log.Level }}</td>
+      <td>{{ log.TimeStamp }}</td>
+      <td>{{ log.Properties }}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,5 +1,6 @@
 export interface Module {
   url: string,
   name: string,
-  icon: string
+  icon: string,
+  customComponent: any
 }
