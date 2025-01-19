@@ -65,7 +65,7 @@
   .subtitle {
     font-size: 1.8rem;
     margin: 1rem 0;
-    text-shadow: 0 0 10px map-get($cyberpunk-theme, 'neon-blue');
+    text-shadow: 0 0 5px map-get($cyberpunk-theme, 'neon-blue');
   }
 
   .text {
