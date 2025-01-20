@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { <%= classify(name) %>Service } from './<%= classify(name) %>.component.service';
 
 @Component({
   selector: 'gamidas-<%= classify(name) %>',
@@ -10,5 +11,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './<%= classify(name) %>.component.scss'
 })
 export class <%= classify(name) %>Component {
-  private readonly <%= classify(name) %>Service: <%= classify(name) %>Service = inject(<%= classify(name) %>Service);
+  private readonly service = inject(<%= classify(name) %>Service);
 }

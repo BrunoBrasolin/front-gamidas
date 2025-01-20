@@ -5,6 +5,7 @@ import { DalmeComponent } from '../dalme/dalme.component';
 import { BillsComponent } from '../bills/bills.component';
 import { HomeComponent } from './home.component';
 import { Routes } from '@angular/router';
+import { NotificationComponent } from '../notification/notification.component';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,7 @@ export class HomeService {
     { url: "contas", name: "Contas", icon: "", customComponent: BillsComponent },
     { url: "dalme", name: "DALME", icon: "", customComponent: DalmeComponent },
     { url: "logs", name: "Logs", icon: "", customComponent: LogsComponent },
+    { url: "notification", name: "Notificações", icon: "", customComponent: NotificationComponent },
   ];
 
 

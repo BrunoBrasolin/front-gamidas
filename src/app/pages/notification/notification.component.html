@@ -1,0 +1,27 @@
+<!-- src/app/lembretes-lista/lembretes-lista.component.html -->
+<div class="lembretes-lista-container">
+  <h2 class="title">Lembretes</h2>
+
+  <div class="lembretes-actions">
+    <gamidas-button color="green">Adicionar Lembrete</gamidas-button>
+  </div>
+
+  <div class="lembretes-list">
+    <div class="lembrete-card">
+      <div class="lembrete-info">
+        <h3 class="lembrete-title">{{ 'lembrete.titulo' }}</h3>
+        <p class="lembrete-date">{{ '12/01/2025 08:00' | date: 'dd/MM/yyyy HH:mm' }}</p>
+        <p class="lembrete-description">{{ 'lembrete.descricao' }}</p>
+      </div>
+
+      <div class="actions">
+        <gamidas-button color="light-gray">Editar</gamidas-button>
+        <gamidas-button color="pink">Deletar</gamidas-button>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noLembretes>
+    <p class="no-lembretes">Você ainda não tem lembretes. Clique no botão para adicionar um.</p>
+  </ng-template>
+</div>
