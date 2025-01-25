@@ -1,17 +1,20 @@
-<!-- src/app/lembretes-lista/lembretes-lista.component.html -->
-<div class="lembretes-lista-container">
-  <h2 class="title">Lembretes</h2>
+<div class="notifications-lista-container">
 
-  <div class="lembretes-actions">
+
+  <gamidas-page-title>Notificações</gamidas-page-title>
+  <gamidas-page-subtitle>Configuração de notificações.</gamidas-page-subtitle>
+
+  <div class="notifications-actions">
     <gamidas-button color="green">Adicionar Lembrete</gamidas-button>
   </div>
 
-  <div class="lembretes-list">
-    <div class="lembrete-card">
-      <div class="lembrete-info">
-        <h3 class="lembrete-title">{{ 'lembrete.titulo' }}</h3>
-        <p class="lembrete-date">{{ '12/01/2025 08:00' | date: 'dd/MM/yyyy HH:mm' }}</p>
-        <p class="lembrete-description">{{ 'lembrete.descricao' }}</p>
+  <div class="notifications-list">
+    <div class="notification-card" *ngFor="let notification of notifications;">
+      <div class="notification-info">
+        <h3 class="notification-title">{{ notification.subject }}</h3>
+        <p class="notification-subtitle">{{ notification.subject}} | {{ notification.dueDate | date: 'dd/MM/yyyy HH:mm'
+          }}</p>
+        <p class="notification-description">{{ notification.body }}</p>
       </div>
 
       <div class="actions">
@@ -21,7 +24,11 @@
     </div>
   </div>
 
-  <ng-template #noLembretes>
-    <p class="no-lembretes">Você ainda não tem lembretes. Clique no botão para adicionar um.</p>
+  <ng-template #noNotifications>
+    <p class="no-notifications">Você ainda não tem notifications. Clique no botão para adicionar um.</p>
   </ng-template>
 </div>
+
+<gamidas-modal [visible]="true">
+  <p>Modal</p>
+</gamidas-modal>

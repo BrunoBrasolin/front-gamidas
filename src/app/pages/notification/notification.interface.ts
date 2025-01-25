@@ -1,6 +1,7 @@
 export interface Notification {
-  id?: number;
-  titulo: string;
-  data: string;
-  descricao: string;
+  id: number;
+  recipient: string;
+  subject: string;
+  body: string;
+  dueDate: Date;
 }
