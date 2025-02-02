@@ -1,8 +1,8 @@
 import { AuthConfig } from "angular-oauth2-oidc";
 
 export const AuthCodeFlowConfig: AuthConfig = {
-  issuer: 'https://localhost:5001',
-  redirectUri: 'http://localhost:4200/login',
+  issuer: 'https://api.gamidas.dev.br/identity-hub',
+  redirectUri: 'https://gamidas.dev.br/login',
   clientId: 'gamidas-portal',
   responseType: 'code',
   showDebugInformation: true,
