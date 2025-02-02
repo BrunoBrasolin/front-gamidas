@@ -14,7 +14,6 @@ export class ModalComponent {
   public close: OutputEmitterRef<void> = output<void>();
 
   closeModal(): void {
-    this.visible.emit(false);
     this.close.emit();
   }
 }

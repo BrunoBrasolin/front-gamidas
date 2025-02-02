@@ -6,6 +6,7 @@ import { BillsComponent } from '../bills/bills.component';
 import { HomeComponent } from './home.component';
 import { Routes } from '@angular/router';
 import { NotificationComponent } from '../notification/notification.component';
+import { LoginComponent } from '../login/login.component';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +14,12 @@ import { NotificationComponent } from '../notification/notification.component';
 export class HomeService {
 
   protected modules: Module[] = [
-    { url: "", name: "Home", icon: "", customComponent: HomeComponent },
-    { url: "contas", name: "Contas", icon: "", customComponent: BillsComponent },
-    { url: "dalme", name: "DALME", icon: "", customComponent: DalmeComponent },
-    { url: "logs", name: "Logs", icon: "", customComponent: LogsComponent },
-    { url: "notification", name: "Notificações", icon: "", customComponent: NotificationComponent },
+    { url: "", name: "Home", customComponent: HomeComponent },
+    { url: "contas", name: "Contas", customComponent: BillsComponent },
+    { url: "dalme", name: "DALME", customComponent: DalmeComponent },
+    { url: "logs", name: "Logs", customComponent: LogsComponent },
+    { url: "notification", name: "Notificações", customComponent: NotificationComponent },
+    { url: "login", name: "Login", customComponent: LoginComponent },
   ];
 
 
