@@ -1,5 +1,5 @@
 @use "sass:map";
-@import '../../../assets/styles/variables.scss';
+@use '../../../assets/scss' as *;
 
 .module-selection {
   text-align: center;

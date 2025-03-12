@@ -1,9 +1,10 @@
+@use "sass:map";
+@use 'assets/scss' as *;
 @import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
-@import 'assets/styles/variables';
 
 html,
 body {
-  background-color: map-get($cyberpunk-theme, 'black');
+  background-color: map.get($cyberpunk-theme, 'black');
 }
 
 * {
@@ -14,7 +15,7 @@ body {
   text-decoration: none;
   border: none;
   font-family: $font;
-  color: map-get($cyberpunk-theme, 'yellow');
+  color: map.get($cyberpunk-theme, 'yellow');
   letter-spacing: 1px;
 }
 

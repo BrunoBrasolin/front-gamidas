@@ -1,5 +1,5 @@
 @use "sass:map";
-@import '../../../assets/styles/variables.scss';
+@use '../../../assets/scss' as *;
 
 .notifications-lista-container {
   padding: 20px;

@@ -1,9 +1,10 @@
-@import '../../../assets/styles/variables.scss';
+@use "sass:map";
+@use '../../../assets/scss' as *;
 
 .navbar {
   padding: 1rem 2rem;
-  background-color: map-get($cyberpunk-theme, 'white');
-  color: map-get($cyberpunk-theme, 'black');
+  background-color: map.get($cyberpunk-theme, 'white');
+  color: map.get($cyberpunk-theme, 'black');
   position: relative;
 
   .mobile-top {
@@ -31,12 +32,12 @@
 
       .select-button {
         cursor: pointer;
-        background-color: map-get($cyberpunk-theme, 'black');
+        background-color: map.get($cyberpunk-theme, 'black');
         font-size: 1rem;
         position: relative;
         padding: 1rem $paddingX;
-        color: map-get($cyberpunk-theme, 'yellow');
-        border: 1px solid map-get($cyberpunk-theme, 'black');
+        color: map.get($cyberpunk-theme, 'yellow');
+        border: 1px solid map.get($cyberpunk-theme, 'black');
         border-radius: 12px;
         transition: .2s;
 
@@ -46,9 +47,9 @@
         }
 
         &:hover {
-          border-color: map-get($cyberpunk-theme, 'yellow');
-          box-shadow: 0 0 10px map-get($cyberpunk-theme, 'pink-neon'), 0 0 20px map-get($cyberpunk-theme, 'pink-neon'), 0 0 30px map-get($cyberpunk-theme, 'pink-neon'), 0 0 40px map-get($cyberpunk-theme, 'pink-neon');
-          text-shadow: 0 0 5px map-get($cyberpunk-theme, 'pink-neon'), 0 0 10px map-get($cyberpunk-theme, 'pink-neon'), 0 0 15px map-get($cyberpunk-theme, 'pink-neon');
+          border-color: map.get($cyberpunk-theme, 'yellow');
+          box-shadow: 0 0 10px map.get($cyberpunk-theme, 'pink-neon'), 0 0 20px map.get($cyberpunk-theme, 'pink-neon'), 0 0 30px map.get($cyberpunk-theme, 'pink-neon'), 0 0 40px map.get($cyberpunk-theme, 'pink-neon');
+          text-shadow: 0 0 5px map.get($cyberpunk-theme, 'pink-neon'), 0 0 10px map.get($cyberpunk-theme, 'pink-neon'), 0 0 15px map.get($cyberpunk-theme, 'pink-neon');
         }
       }
 
@@ -57,7 +58,7 @@
         flex-direction: column;
         position: absolute;
         display: none;
-        background-color: map-get($cyberpunk-theme, 'yellow');
+        background-color: map.get($cyberpunk-theme, 'yellow');
         width: 100%;
         transition: 2s;
         z-index: 1;
@@ -71,11 +72,11 @@
 
           .link {
             padding: .25rem $paddingX;
-            color: map-get($cyberpunk-theme, 'black');
+            color: map.get($cyberpunk-theme, 'black');
             width: 100%;
 
             &:hover {
-              background-color: map-get($cyberpunk-theme, 'green-neon');
+              background-color: map.get($cyberpunk-theme, 'green-neon');
             }
           }
         }
@@ -96,21 +97,21 @@
       .title-text {
         font-size: 2rem;
         letter-spacing: .75rem;
-        color: map-get($cyberpunk-theme, 'yellow');
+        color: map.get($cyberpunk-theme, 'yellow');
         animation: pump-text-shadow 1.5s ease-in-out infinite;
       }
 
       .userName {
         animation: none;
         font-size: 1rem;
-        color: map-get($cyberpunk-theme, 'light-gray');
+        color: map.get($cyberpunk-theme, 'light-gray');
       }
     }
 
     .subtitle {
       font-weight: 100;
       font-size: 1.25rem;
-      color: map-get($cyberpunk-theme, 'black');
+      color: map.get($cyberpunk-theme, 'black');
       text-align: center;
     }
 
@@ -127,22 +128,22 @@
 @keyframes pump-text-shadow {
   0% {
     text-shadow:
-      0 0 1px map-get($cyberpunk-theme, 'pink-neon'),
-      0 0 2px map-get($cyberpunk-theme, 'pink-neon'),
-      0 0 3px map-get($cyberpunk-theme, 'pink-neon');
+      0 0 1px map.get($cyberpunk-theme, 'pink-neon'),
+      0 0 2px map.get($cyberpunk-theme, 'pink-neon'),
+      0 0 3px map.get($cyberpunk-theme, 'pink-neon');
   }
 
   50% {
     text-shadow:
-      0 0 3px map-get($cyberpunk-theme, 'pink-neon'),
-      0 0 5px map-get($cyberpunk-theme, 'pink-neon'),
-      0 0 6px map-get($cyberpunk-theme, 'pink-neon');
+      0 0 3px map.get($cyberpunk-theme, 'pink-neon'),
+      0 0 5px map.get($cyberpunk-theme, 'pink-neon'),
+      0 0 6px map.get($cyberpunk-theme, 'pink-neon');
   }
 
   100% {
     text-shadow:
-      0 0 1px map-get($cyberpunk-theme, 'pink-neon'),
-      0 0 2px map-get($cyberpunk-theme, 'pink-neon'),
-      0 0 3px map-get($cyberpunk-theme, 'pink-neon');
+      0 0 1px map.get($cyberpunk-theme, 'pink-neon'),
+      0 0 2px map.get($cyberpunk-theme, 'pink-neon'),
+      0 0 3px map.get($cyberpunk-theme, 'pink-neon');
   }
 }

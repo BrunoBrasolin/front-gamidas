@@ -1,5 +1,5 @@
 @use "sass:map";
-@import '../../../assets/styles/variables.scss';
+@use '../../../assets/scss' as *;
 
 .gamidas-button {
   padding: 1rem 2rem;

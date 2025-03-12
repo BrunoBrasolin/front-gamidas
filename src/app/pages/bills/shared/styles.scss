@@ -1,11 +1,12 @@
-@import '../../../../assets/styles/variables.scss';
+@use "sass:map";
+@use '../../../../assets/scss' as *;
 
 .main {
-  background-color: map-get($cyberpunk-theme, 'dark-gray');
+  background-color: map.get($cyberpunk-theme, 'dark-gray');
   border-radius: 10px;
   padding: 2rem;
   max-width: 400px;
-  box-shadow: 0 0 10px map-get($cyberpunk-theme, 'neon-blue');
+  box-shadow: 0 0 10px map.get($cyberpunk-theme, 'neon-blue');
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,10 +14,10 @@
 
   .title {
     font-size: 2.5rem;
-    color: map-get($cyberpunk-theme, 'pink');
+    color: map.get($cyberpunk-theme, 'pink');
     text-align: center;
     margin-bottom: 1rem;
-    text-shadow: 0 0 10 map-get($cyberpunk-theme, 'pink-neon');
+    text-shadow: 0 0 10 map.get($cyberpunk-theme, 'pink-neon');
   }
 
   .form-group {
@@ -24,7 +25,7 @@
     margin-bottom: 1rem;
 
     .label {
-      color: map-get($cyberpunk-theme, 'light-text');
+      color: map.get($cyberpunk-theme, 'light-text');
       font-size: 1.1rem;
       margin-bottom: 0.5rem;
       display: block;
@@ -34,17 +35,17 @@
     .select {
       width: 100%;
       padding: 0.8rem;
-      background-color: map-get($cyberpunk-theme, 'input-bg');
-      border: 2px solid map-get($cyberpunk-theme, 'border');
+      background-color: map.get($cyberpunk-theme, 'input-bg');
+      border: 2px solid map.get($cyberpunk-theme, 'border');
       border-radius: 8px;
-      color: map-get($cyberpunk-theme, 'light-text');
+      color: map.get($cyberpunk-theme, 'light-text');
       font-size: 1rem;
       outline: none;
       transition: background-color 0.3s ease, border 0.3s ease;
 
       &:focus {
-        background-color: map-get($cyberpunk-theme, 'black');
-        border-color: map-get($cyberpunk-theme, 'neon-blue');
+        background-color: map.get($cyberpunk-theme, 'black');
+        border-color: map.get($cyberpunk-theme, 'neon-blue');
       }
     }
   }
@@ -65,12 +66,12 @@
   .subtitle {
     font-size: 1.8rem;
     margin: 1rem 0;
-    text-shadow: 0 0 5px map-get($cyberpunk-theme, 'neon-blue');
+    text-shadow: 0 0 5px map.get($cyberpunk-theme, 'neon-blue');
   }
 
   .text {
     font-size: 1.2rem;
-    color: map-get($cyberpunk-theme, 'light-text');
+    color: map.get($cyberpunk-theme, 'light-text');
     margin: 0.5rem 0;
   }
 }
