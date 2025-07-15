@@ -10,7 +10,7 @@
     <div class="notification-card" *ngFor="let notification of notifications">
       <div class="notification-info">
         <h3 class="notification-title">{{ notification.subject }}</h3>
-        <p class="notification-subtitle">{{ notification.subject }} | {{ notification.dueDate | date : "dd/MM/yyyy HH:mm" }}</p>
+        <p class="notification-subtitle">{{ notification.recipient }} | {{ notification.dueDate | date : "dd/MM/yyyy HH:mm" }}</p>
         <p class="notification-description">{{ notification.body }}</p>
       </div>
 
