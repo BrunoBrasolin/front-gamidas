@@ -2,20 +2,20 @@
   <h1 class="title">Calcular Porcentagem</h1>
 
   <div class="form-group">
-    <input class="input" type="number" placeholder="Valor" [(ngModel)]="value" />
+    <gamidas-input type="number" placeholder="Valor" [(ngModel)]="value" />
   </div>
 
-  <br>
+  <br />
 
   <div class="button-row">
     <gamidas-button color="light-gray" (click)="onClickLimpar()">Limpar</gamidas-button>
     <gamidas-button color="pink" (click)="onClickCalcular()">Calcular</gamidas-button>
   </div>
 
-  <br>
-  <br>
+  <br />
+  <br />
 
   <h2 class="subtitle">Valor de cada um</h2>
-  <p class="text">Letícia: R${{ apiReturn?.Leticia || '0,00' }}</p>
-  <p class="text">Bruno: R${{ apiReturn?.Bruno || '0,00' }}</p>
+  <p class="text">Letícia: R${{ apiReturn?.Leticia || "0,00" }}</p>
+  <p class="text">Bruno: R${{ apiReturn?.Bruno || "0,00" }}</p>
 </main>

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
+import { Component, HostListener, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
 
 @Component({
   selector: 'gamidas-modal',
@@ -16,4 +16,12 @@ export class ModalComponent {
   closeModal(): void {
     this.close.emit();
   }
+
+  @HostListener('document:keydown.escape', ['$event'])
+  onEscapePress(event: KeyboardEvent): void {
+    if (this.visible()) {
+      this.closeModal();
+    }
+  }
+
 }

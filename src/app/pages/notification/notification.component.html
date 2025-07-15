@@ -1,19 +1,16 @@
 <div class="notifications-lista-container">
-
-
   <gamidas-page-title>Notificações</gamidas-page-title>
   <gamidas-page-subtitle>Configuração de notificações.</gamidas-page-subtitle>
 
   <div class="notifications-actions">
-    <gamidas-button color="green">Adicionar Lembrete</gamidas-button>
+    <gamidas-button color="green" (click)="onCkickButton()">Adicionar Lembrete</gamidas-button>
   </div>
 
   <div class="notifications-list">
-    <div class="notification-card" *ngFor="let notification of notifications;">
+    <div class="notification-card" *ngFor="let notification of notifications">
       <div class="notification-info">
         <h3 class="notification-title">{{ notification.subject }}</h3>
-        <p class="notification-subtitle">{{ notification.subject}} | {{ notification.dueDate | date: 'dd/MM/yyyy HH:mm'
-          }}</p>
+        <p class="notification-subtitle">{{ notification.subject }} | {{ notification.dueDate | date : "dd/MM/yyyy HH:mm" }}</p>
         <p class="notification-description">{{ notification.body }}</p>
       </div>
 
@@ -29,6 +26,33 @@
   </ng-template>
 </div>
 
-<gamidas-modal [visible]="true">
-  <p>Modal</p>
+<gamidas-modal [visible]="modalVisible" (close)="modalVisible = false">
+  <form (ngSubmit)="submitForm()" #messageForm="ngForm">
+    <h2>Cadastrar notificação</h2>
+
+    <div class="form-group">
+      <label for="recipient">E-mail</label>
+      <gamidas-input type="text" id="recipient" name="recipient" [(ngModel)]="formData.recipient" [required]="true" email />
+    </div>
+
+    <div class="form-group">
+      <label for="subject">Assunto</label>
+      <gamidas-input type="text" id="subject" name="subject" [(ngModel)]="formData.subject" [required]="true" />
+    </div>
+
+    <div class="form-group">
+      <label for="body">Corpo</label>
+      <gamidas-input type="textarea" id="body" name="body" [(ngModel)]="formData.body" rows="4" [required]="true" />
+    </div>
+
+    <div class="form-group">
+      <label for="dueDate">Data de Validade</label>
+      <gamidas-input type="date" id="dueDate" name="dueDate" [(ngModel)]="formData.dueDate" [required]="true" />
+    </div>
+
+    <div class="modal-footer">
+      <gamidas-button color="pink" type="button" (click)="modalVisible = false">Cancel</gamidas-button>
+      <gamidas-button color="green" type="submit" [disabled]="messageForm.invalid">Send</gamidas-button>
+    </div>
+  </form>
 </gamidas-modal>

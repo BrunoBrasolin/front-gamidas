@@ -10,6 +10,10 @@ export class NotificationService {
   private readonly http: HttpClient = inject(HttpClient);
 
   getNotifications(): Observable<Notification[]> {
-    return this.http.get<Notification[]>("https://api.gamidas.dev.br/notification/api/Notification/List");
+    return this.http.get<Notification[]>("https://api.gamidas.dev.br/notification");
+  }
+
+  postNotification(notification: Notification): Observable<Notification> {
+    return this.http.post<Notification>("https://api.gamidas.dev.br/notification", { notification: notification });
   }
 }
