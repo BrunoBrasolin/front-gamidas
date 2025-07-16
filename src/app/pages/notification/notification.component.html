@@ -15,8 +15,8 @@
       </div>
 
       <div class="actions">
-        <gamidas-button color="light-gray">Editar</gamidas-button>
-        <gamidas-button color="pink">Deletar</gamidas-button>
+        <gamidas-button color="light-gray" (click)="editNotification(notification)">Editar</gamidas-button>
+        <gamidas-button color="pink" (click)="deleteNotification(notification.id)">Deletar</gamidas-button>
       </div>
     </div>
   </div>

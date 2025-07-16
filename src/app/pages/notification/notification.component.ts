@@ -36,18 +36,64 @@ export class NotificationComponent implements OnInit {
   };
 
   public ngOnInit(): void {
+    this.getNotifications();
+  }
+
+  public onCkickButton(): void {
+    this.clearModal();
+    this.modalVisible = true;
+  }
+
+  getNotifications() {
+    this.notifications = [];
+
     this.service.getNotifications().subscribe((notifications: Notification[]) => {
       this.notifications = notifications;
     });
   }
 
-  public onCkickButton(): void {
+  submitForm(): void {
+    this.service.postPutNotification(this.formData).subscribe((response: boolean) => {
+      if (!response) {
+        alert("Erro!");
+        return;
+      }
+      alert("Sucesso!");
+
+      this.getNotifications();
+
+      this.modalVisible = false;
+
+      this.clearModal();
+    });
+  }
+
+  editNotification(notification: Notification): void {
+    this.formData = { ...notification };
     this.modalVisible = true;
   }
 
-  submitForm(): void {
-    this.service.postNotification(this.formData).subscribe((response: Notification) => {
-      this.modalVisible = false;
+  deleteNotification(id: number | null): void {
+    if (!id) return;
+
+    this.service.deleteNotification(id).subscribe((response: boolean) => {
+      if (!response) {
+        alert("Erro ao deletar notificação!");
+        return;
+      }
+      alert("Notificação deletada com sucesso!");
+
+      this.getNotifications();
     });
+  }
+
+  clearModal(): void {
+    this.formData = {
+      id: null,
+      recipient: '',
+      subject: '',
+      body: '',
+      dueDate: null
+    };
   }
 }

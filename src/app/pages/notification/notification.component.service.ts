@@ -8,12 +8,20 @@ import { Notification } from './notification.interface';
 })
 export class NotificationService {
   private readonly http: HttpClient = inject(HttpClient);
+  private readonly API_URL: string = "https://api.gamidas.dev.br/notification";
 
   getNotifications(): Observable<Notification[]> {
-    return this.http.get<Notification[]>("https://api.gamidas.dev.br/notification");
+    return this.http.get<Notification[]>(`${this.API_URL}`);
   }
 
-  postNotification(notification: Notification): Observable<Notification> {
-    return this.http.post<Notification>("https://api.gamidas.dev.br/notification", { notification: notification });
+  postPutNotification(notification: Notification): Observable<boolean> {
+    if (notification.id)
+      return this.http.put<boolean>(`${this.API_URL}/${notification.id}`, { notification: notification });
+    else
+      return this.http.post<boolean>(`${this.API_URL}`, { notification: notification });
+  }
+
+  deleteNotification(id: number): Observable<boolean> {
+    return this.http.delete<boolean>(`${this.API_URL}/${id}`);
   }
 }
