@@ -1,13 +1,13 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotificationService } from './notification.component.service';
-import { ButtonComponent } from '../../components/button/button.component';
-import { PageTitleComponent } from "../../components/page-title/page-title.component";
-import { PageSubtitleComponent } from "../../components/page-subtitle/page-subtitle.component";
+import { ButtonComponent } from "design-system-gamidas";
+import { PageTitleComponent } from "design-system-gamidas";
+import { PageSubtitleComponent } from "design-system-gamidas";
 import { Notification } from './notification.interface';
-import { ModalComponent } from "../../components/modal/modal.component";
+import { ModalComponent } from "design-system-gamidas";
 import { FormsModule } from '@angular/forms';
-import { InputComponent } from '../../components/input/input.component';
+import { InputComponent } from 'design-system-gamidas';
 
 @Component({
   selector: 'gamidas-Notification',

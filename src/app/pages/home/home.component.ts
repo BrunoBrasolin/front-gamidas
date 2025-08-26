@@ -3,9 +3,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Module } from './home.interface';
 import { HomeService } from './home.service';
-import { IconComponent } from '../../components/icon/icon.component';
-import { PageTitleComponent } from "../../components/page-title/page-title.component";
-import { PageSubtitleComponent } from "../../components/page-subtitle/page-subtitle.component";
+import { IconComponent } from 'design-system-gamidas';
+import { PageTitleComponent } from "design-system-gamidas";
+import { PageSubtitleComponent } from "design-system-gamidas";
 
 @Component({
   selector: 'gamidas-home',

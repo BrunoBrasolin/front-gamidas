@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { BillsService } from '../bills.service';
 import { FormsModule } from '@angular/forms';
 import { CalculatePercentageInterface } from '../bills.interface';
-import { ButtonComponent } from "../../../components/button/button.component";
-import { InputComponent } from '../../../components/input/input.component';
+import { ButtonComponent } from "design-system-gamidas";
+import { InputComponent } from 'design-system-gamidas';
 
 @Component({
   selector: 'gamidas-calculate-percentage',

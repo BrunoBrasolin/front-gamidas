@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { NavbarComponent } from "./components/navbar/navbar.component";
+import { NavbarComponent } from "design-system-gamidas";
+import { HomeService } from './pages/home/home.service';
 
 @Component({
   selector: 'gamidas-root',
@@ -10,4 +11,6 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 })
 export class AppComponent {
   title = 'front-gamidas';
+  private service: HomeService = inject(HomeService);
+  public modules = this.service.getModules();
 }
