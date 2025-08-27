@@ -14,7 +14,7 @@ export class DalmeService {
 
 
   public sendUserMessage(dto: ChatDto): Observable<ChatDto> {
-    const response = this.http.post<ChatDto>(`https://api.gamidas.dev.br/message`, dto);
+    const response = this.http.post<ChatDto>(`https://api.gamidas.dev.br/chat/message`, dto);
 
     return response;
   }
